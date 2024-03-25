@@ -1,0 +1,119 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313432;
+}
+
+.fenetre_princ {
+    position: absolute;
+    top: 275px;
+    width: 320px;
+    height: 265px;
+    background-color: #262625;
+    border-radius: 15px;  
+}
+
+.cbld_titre {   
+    position: fixed;
+    top: 190px;
+    width: 320px;
+    height: 70px;
+    background-color: #262625;
+    border-radius: 20px;
+}
+
+.cbld_titre p {
+    text-align: center;
+    line-height: 3px;
+    font-family:monospace;
+    color: #F5CB5A;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.form_id > :nth-child(-n+2){
+    margin-top: 20px;
+    padding-left: 20px;
+    Font-family: monospace;
+    color: #FCFBFC;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.id_fen input[type="text"] {
+    background-color: white;
+    border-radius: 15px;
+    height: 40px;
+    width: 273px;
+    font-size: 20px;
+}
+
+.mdp_fen {
+    margin-top: 25px;
+}
+
+.mdp_fen input[type="password"] {
+    background-color: white;
+    border-radius: 15px;
+    height: 40px;
+    width: 273px;
+    font-size: 20px;
+}
+
+.submt_fen {
+    padding-left: 167px;
+}
+
+.submt_fen input[type="submit"] {
+    background-color: #F5CB5A;
+    color: #000000;
+    Font-family: monospace;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 135px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.mdp_oubli {
+    padding-left: 20px;
+}
+
+
+.mdp_oubli p {
+    color: #F5CB5A;
+    Font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 2px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #222222;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    Font-family: monospace;
+    font-size: 11px;
+}
+
+.logo {
+    position: absolute;
+    left:auto ;
+    right:auto;
+    top: 6%;
+}
+
+.logo img{
+    width: 175px;
+}
