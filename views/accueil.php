@@ -7,11 +7,11 @@
     <link href="assets\home.css" rel="stylesheet">
 </head>
 <header>
-    <img src="logo.png">
+    <img src="assets\logo.png">
     <div class="theader">Vos mots de passe</div>
     
     <div class="profile">Pseudo</div>
-    <img src="icon_avatar.png">
+    <img src="assets\icon_avatar.png">
 </header>
 
 <body>
