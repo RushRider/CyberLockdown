@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="logo">
-        <img src="logo.png">
+        <img src="assets\logo.png">
     </div>
     <div class="cbld_titre">
         <p>CyberLockdown</p>
