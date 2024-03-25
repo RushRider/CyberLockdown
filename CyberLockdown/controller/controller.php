@@ -6,3 +6,7 @@ function connectDisplay(){
 function homeDisplay(){
     require_once("views/acceuil.php");
 }
+
+function footerDisplay(){
+    require_once("views\footer.php");   
+}
