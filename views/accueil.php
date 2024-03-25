@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vos mots de passe</title>
-    <link href="assets/home.css" rel="stylesheet">
+    <link href="../assets/home.css" rel="stylesheet">
 </head>
 <header>
-    <img src="assets\logo.png">
+    <img src="../assets/logo.png">
     <div class="theader">Vos mots de passe</div>
     <div class="profile">Pseudo</div>
-    <img src="assets\icon_avatar.png">
+    <img src="../assets/icon_avatar.png">
 </header>
 
 <body>
