@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vos mots de passe</title>
-    <link href="home.css" rel="stylesheet">
+    <link href="assets\home.css" rel="stylesheet">
 </head>
 <header>
     <img src="logo.png">
