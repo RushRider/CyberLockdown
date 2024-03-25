@@ -10,7 +10,7 @@
 <?php 
 require_once("controller\controller.php"); 
     if(htmlspecialchars_decode(isset($_POST["p"])) && htmlspecialchars_decode(!empty($_POST["p"]))){
-        $p = htmlspecialchars($_POST["p"]);
+        $p = htmlspecialchars_decode($_POST["p"]);
         if($p=="connect"){
             connectDisplay();
             echo"<link href='assets/connect.css' rel='stylesheet'>";
