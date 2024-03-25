@@ -8,5 +8,5 @@ function homeDisplay(){
 }
 
 function footerDisplay(){
-    require_once("views\footer.php");   
+    require_once("views/footer.php");   
 }
