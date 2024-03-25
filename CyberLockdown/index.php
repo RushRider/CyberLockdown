@@ -5,12 +5,9 @@ footerDisplay();
         $p = htmlspecialchars_decode($_POST["p"]);
         if($p=="connect"){
             connectDisplay();
-            echo"<link href='assets/connect.css' rel='stylesheet'>";
         }else if($p=="home"){
             homeDisplay();
-            echo"<link href='assets/home.css' rel='stylesheet'>";
         }
     }else{
         connectDisplay();
-        echo"<link href='assets/connect.css' rel='stylesheet'>";
     }
