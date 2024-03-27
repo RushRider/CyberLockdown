@@ -29,6 +29,9 @@
         <div class="submt_fen">
             <input type="submit" value="Se connecter">
         </div>
+        <div>
+            <a href="views/register.php">Pas de compte ?</a>
+        </div>
     </form>
     </div>
 </body>
