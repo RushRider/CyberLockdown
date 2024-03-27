@@ -7,3 +7,17 @@ function DbConnexion(){
             die('Erreur : '.$e->getMessage());
         }
 }
+
+function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays){
+    $db=DbConnexion();
+    $sql="insert into connect (pseudo,hash,nom,prenom,mail,phone,pays) values (:pseudo,:hash,:nom,:prenom,:mail,:phone,:pays)";
+    $statement=$db->prepare($sql);
+    $statement->bindParam(':pseudo', $pseudo);
+    $statement->bindParam(':hash', $hash);
+    $statement->bindParam(':nom', $nom);
+    $statement->bindParam(':prenom', $prenom);
+    $statement->bindParam(':mail', $mail);
+    $statement->bindParam(':phone', $num);
+    $statement->bindParam(':pays', $pays);
+    return $statement->execute();
+}
