@@ -21,3 +21,14 @@ function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays){
     $statement->bindParam(':pays', $pays);
     return $statement->execute();
 }
+
+function GenPass(){
+    $chaine = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#-_/:!+*$%;,";
+    $nb_caract = 14;
+    $pass = "";
+    for($u = 1; $u <= $nb_caract; $u++) {
+        $nb = strlen($chaine);
+        $nb = mt_rand(0,($nb-1));
+        $pass.=$chaine[$nb];
+    }
+}
