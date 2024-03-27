@@ -3,6 +3,10 @@ function connectDisplay(){
     require_once("views/connect.php");
 }
 
+function registerDisplay(){
+    require_once("views/register.php");
+}
+
 function homeDisplay(){
     require_once("views/acceuil.php");
 }

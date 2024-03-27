@@ -15,6 +15,12 @@ footerDisplay();
         newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays);
         connectDisplay();
     }else{
-        connectDisplay();
-        echo"<h1>sale_merde</h1>";
+        if(htmlspecialchars(isset($_GET["p"])) && htmlspecialchars(!empty($_GET["p"]))){
+            $p=htmlspecialchars($_GET["p"]);
+            if($p=="register"){
+                registerDisplay();
+            }
+        }else{
+            connectDisplay();
+        }
     }
