@@ -77,8 +77,8 @@ footer p {
 
 .generate {
     position: absolute;
-    margin-top: 39%;
-    margin-left: 78%;
+    bottom: 50px;
+    right: 50px;
     background-color: #222222;
     border-radius: 15px;
 }
@@ -87,6 +87,7 @@ footer p {
     display: block;
     font-family: monospace;
 }
+
 
 input[type="text"] {
     width: 250px;

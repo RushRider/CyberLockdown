@@ -29,6 +29,21 @@
         </div>
     </div>
 
+    <<script>
+        function GenPass() {
+            var chaine = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#-_/:!+*$%;,";
+            var nb_caract = 14;
+            var pass = "";
+            for(var u = 1; u <= nb_caract; u++) {
+                var nb = chaine.length;
+                var randomIndex = Math.floor(Math.random() * nb);
+                pass += chaine[randomIndex];
+            }
+            document.getElementById("passwordField").value = pass;
+        }
+    </script>
+</head>
+<body>
     <div class="generate">
         <input type="text" id="passwordField" readonly>
         <button onclick="GenPass()">Générer</button>
