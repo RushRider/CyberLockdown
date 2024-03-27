@@ -21,7 +21,7 @@
         </div>
         <div class="id_user">
             <label for="id">Nom d'utilisateur</label>
-            <input type="text" name="name" id="name" required />
+            <input type="text" name="name" id="pseudo" required />
         </div>
         <div class="id_nom">
             <label for="id">Nom</label>
@@ -41,11 +41,11 @@
         </div>
         <div class="id_num">
             <label for="id">Numéro de téléphone</label>
-            <input type="text" name="mail" id="mail" required />
+            <input type="text" name="num" id="num" required />
         </div>
         <div class="id_country">
             <label for="id">Pays</label>
-            <input type="text" name="country" id="country" required />
+            <input type="text" name="country" id="pays" required />
         </div>
         <div class="submt_fen">
             <input type="submit" value="Creer compte">
