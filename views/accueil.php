@@ -28,7 +28,7 @@
             <p>Autre</p>
         </div>
     </div>
-    <<script>
+    <script>
         function GenPass() {
             var chaine = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#-_/:!+*$%;,";
             var nb_caract = 14;
