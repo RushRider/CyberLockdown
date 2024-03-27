@@ -1,7 +1,7 @@
 <?php 
 require_once("controller/controller.php"); 
 footerDisplay();
-    if(htmlspecialchars(isset($_POST["mail"])) && htmlspecialchars(!empty($_POST["mail"])) && htmlspecialchars(!empty($_POST["mdp1"]))==htmlspecialchars(!empty($_POST["mdp2"]))){
+    if(htmlspecialchars(isset($_POST["pseudo"])) && htmlspecialchars(!empty($_POST["pseudo"])) && htmlspecialchars(!empty($_POST["mdp"]))==htmlspecialchars(!empty($_POST["mdp2"]))){
         $mail = htmlspecialchars($_POST["mail"]);
         $pseudo = htmlspecialchars($_POST["pseudo"]);
         $nom = htmlspecialchars($_POST["nom"]);
@@ -15,5 +15,6 @@ footerDisplay();
         newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays);
         connectDisplay();
     }else{
+        connectDisplay();
         echo"<h1>sale_merde</h1>";
     }
