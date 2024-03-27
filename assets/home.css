@@ -76,15 +76,11 @@ footer p {
 }
 
 .generate {
-    position: absolute;
-    margin-top: 39%;
-    margin-left: 78%;
+    position: sticky;
+    margin-top: 50%;
+    margin-left: 80%;
     background-color: #222222;
     border-radius: 15px;
-}
-
-.generate * {
-    display: block;
     font-family: monospace;
 }
 
