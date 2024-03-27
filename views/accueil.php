@@ -45,7 +45,7 @@
 <body>
     <div class="generate">
         <input type="text" id="passwordField" readonly>
-        <button onclick="GenPass()">Générer</button>a
+        <button onclick="GenPass()">Générer</button>
     </div>
 </body>
 </html>
