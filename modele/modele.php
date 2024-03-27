@@ -39,5 +39,6 @@ function RecupConnect($id){
     $sql="select hash,salt from connect where pseudo=:id";
     $statement=$db->prepare($sql);
     $statement->bindParam(':id', $id);
-    return $statement->fetch();
+    $statement->execute();
+    return $statement->fetch(); 
 }

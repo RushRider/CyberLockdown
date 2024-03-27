@@ -16,16 +16,21 @@ function footerDisplay(){
 }
 
 function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
-    require("modele/modele.php");
+    require_once("modele/modele.php");
     accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt);
 }
 
-function tryPassword($id,$mdp){
-    require("modele/modele.php");
+function tryPassword($id, $mdp) {
+    require_once("modele/modele.php");
     $info=RecupConnect($id);
-    $sel=htmlspecialchars_decode($info['salt']);
+    $sel=$info['salt'];
     $tryHash=password_hash($mdp.$sel,PASSWORD_DEFAULT);
     $real=$info['hash'];
+    echo"<h1>".$sel."</h1>";
+    echo"<h1>".$mdp."</h1>";
+    echo"<h1>".$sel."</h1>";
+    echo"<h1>".$tryHash."</h1>";
+    echo"<h1>".$real."</h1>";
     if($tryHash==$real){
         return true;
     }else{
