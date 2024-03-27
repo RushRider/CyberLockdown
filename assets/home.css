@@ -76,13 +76,18 @@ footer p {
 }
 
 .generate {
-    position: sticky;
-    margin-top: 50%;
-    margin-left: 80%;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
     background-color: #222222;
     border-radius: 15px;
+}
+
+.generate * {
+    display: block;
     font-family: monospace;
 }
+
 
 input[type="text"] {
     width: 250px;
