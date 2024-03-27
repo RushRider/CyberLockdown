@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberLockdown</title>
-    <link href="assets/connect.css" rel="stylesheet">
+    <link href="/assets/connect.css" rel="stylesheet">
 </head>
 <body>
     <div class="logo">
@@ -14,7 +14,7 @@
         <p>CyberLockdown</p>
     </div>
     <div class="fenetre_princ">
-    <form action="views/accueil.php" method="post" class="form_id">
+    <form action="views/home.php" method="post" class="form_id">
         <div class="id_fen">
             <label for="id">Identifiant</label>
             <input type="text" name="name" id="name" required />

@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313432;
+}
+
+.fenetre_princ {
+    position: relative;
+    top: 10%;
+    padding: 10px;
+    background-color: #262625;
+    border-radius: 15px;
+}
+
+.cbld_titre {
+    position: fixed;
+    top: 190px;
+    width: 320px;
+    height: 70px;
+    background-color: #262625;
+    border-radius: 20px;
+}
+
+.cbld_titre p {
+    text-align: center;
+    line-height: 3px;
+    font-family:monospace;
+    color: #F5CB5A;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.form_id > :nth-child(-n+8){
+    margin-top: 10px;
+    padding-left: 20px;
+    Font-family: monospace;
+    color: #FCFBFC;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.submt_fen {
+    padding-left: 31%;
+}
+
+.submt_fen input[type="submit"] {
+    background-color: #F5CB5A;
+    color: #000000;
+    Font-family: monospace;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 200px;
+    height: 75px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #222222;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    Font-family: monospace;
+    font-size: 11px;
+}
+
+.logo {
+    position: absolute;
+    left:auto ;
+    right:auto;
+    top: 6%;
+}
+
+.logo img{
+    width: 175px;
+}
+
+.form_id input[type="text"],
+.form_id input[type="number"] {
+    border-radius: 7px;
+    padding: 2px;
+    background-color: #313432;
+    border: none;
+    color: white;
+
+}
