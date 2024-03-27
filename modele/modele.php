@@ -36,7 +36,7 @@ function GenPass(){
 
 function RecupConnect($id){
     $db=DbConnexion();
-    $sql="select hash,salt from connect where pseudo=':id'";
+    $sql="select hash,salt from connect where pseudo=:id";
     $statement=$db->prepare($sql);
     $statement->bindParam(':id', $id);
     return $statement->fetch();
