@@ -14,7 +14,7 @@
         <p>CyberLockdown</p>
     </div>
     <div class="fenetre_princ">
-    <form action="views/accueil.php" method="post" class="form_id">
+    <form action="views/traitement" method="post" class="form_id">
         <div class="id_mail">
             <label for="id">Adresse mail</label>
             <input type="text" name="mail" id="mail" required />
