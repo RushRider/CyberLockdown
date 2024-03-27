@@ -31,7 +31,7 @@
 
     <div class="generate">
         <input type="text" id="passwordField" readonly>
-        <button onclick="generatePassword()">Générer</button>
+        <button onclick="GenPass()">Générer</button>
     </div>
 </body>
 <footer>
