@@ -8,9 +8,9 @@ function DbConnexion(){
         }
 }
 
-function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays){
+function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
     $db=DbConnexion();
-    $sql="insert into connect (pseudo,hash,nom,prenom,mail,phone,pays) values (:pseudo,:hash,:nom,:prenom,:mail,:phone,:pays)";
+    $sql="insert into connect (pseudo,hash,nom,prenom,mail,phone,pays,salt) values (:pseudo,:hash,:nom,:prenom,:mail,:phone,:pays,:sel)";
     $statement=$db->prepare($sql);
     $statement->bindParam(':pseudo', $pseudo);
     $statement->bindParam(':hash', $hash);
@@ -19,6 +19,7 @@ function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays){
     $statement->bindParam(':mail', $mail);
     $statement->bindParam(':phone', $num);
     $statement->bindParam(':pays', $pays);
+    $statement->bindParam(':sel', $salt);
     return $statement->execute();
 }
 
@@ -31,4 +32,12 @@ function GenPass(){
         $nb = mt_rand(0,($nb-1));
         $pass.=$chaine[$nb];
     }
+}
+
+function RecupConnect($id){
+    $db=DbConnexion();
+    $sql="select hash,salt from connect where pseudo=':id'";
+    $statement=$db->prepare($sql);
+    $statement->bindParam(':id', $id);
+    return $statement->fetch();
 }

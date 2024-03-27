@@ -17,11 +17,11 @@
     <form action="index.php?p=home" method="post" class="form_id">
         <div class="id_fen">
             <label for="id">Identifiant</label>
-            <input type="text" name="name" id="name" required />
+            <input type="text" name="tryId" id="name" required />
         </div>
         <div class="mdp_fen">
             <label for="id">Mot de passe</label>
-            <input type="password" name="mdp" id="mdp" required />
+            <input type="password" name="TryMdp" id="mdp" required />
         </div>
         <div class="mdp_oubli">
             <p>Mot de passe oublié ?</p>
