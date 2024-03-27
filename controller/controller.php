@@ -8,7 +8,7 @@ function registerDisplay(){
 }
 
 function homeDisplay(){
-    require_once("views/acceuil.php");
+    require_once("views/accueil.php");
 }
 
 function footerDisplay(){

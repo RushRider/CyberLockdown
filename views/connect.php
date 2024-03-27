@@ -14,7 +14,7 @@
         <p>CyberLockdown</p>
     </div>
     <div class="fenetre_princ">
-    <form action="views/home.php" method="post" class="form_id">
+    <form action="index.php?p=home" method="post" class="form_id">
         <div class="id_fen">
             <label for="id">Identifiant</label>
             <input type="text" name="name" id="name" required />

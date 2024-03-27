@@ -19,8 +19,12 @@ footerDisplay();
             $p=htmlspecialchars($_GET["p"]);
             if($p=="register"){
                 registerDisplay();
+            }else{
+                if($p=="home"){
+                    homeDisplay();
+                }
             }
         }else{
             connectDisplay();
-        }
+            }
     }
