@@ -10,3 +10,8 @@ function homeDisplay(){
 function footerDisplay(){
     require_once("views/footer.php");   
 }
+
+function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays){
+    require("modele/modele.php");
+    accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays);
+}
