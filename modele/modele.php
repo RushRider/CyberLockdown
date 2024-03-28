@@ -1,13 +1,6 @@
 <?php
-function DbConnexion(){
-    try {
-        $db= new PDO('mysql:host=localhost;dbname=cyberlockdown;charset=utf8','root','');
-        return $db;
-        }catch(exception $e){
-            die('Erreur : '.$e->getMessage());
-        }
-}
 
+require_once("dbconnect.php");
 function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
     $db=DbConnexion();
     $sql="insert into connect (pseudo,hash,nom,prenom,mail,phone,pays,salt) values (:pseudo,:hash,:nom,:prenom,:mail,:phone,:pays,:sel)";
