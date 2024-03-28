@@ -37,7 +37,7 @@
         </div>
         <div class="mdp_fen">
             <label for="id">Confirmation de Mot de passe</label>
-            <input type="password2" name="mdp2" id="mdp2" required />
+            <input type="password" name="mdp2" id="mdp2" required />
         </div>
         <div class="id_num">
             <label for="id">Numéro de téléphone</label>
