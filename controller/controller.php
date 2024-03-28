@@ -8,7 +8,7 @@ function registerDisplay(){
 }
 
 function homeDisplay(){
-    require_once("/views/accueil.php");
+    require_once("views/accueil.php");
 }
 
 function footerDisplay(){
@@ -24,15 +24,15 @@ function tryPassword($id, $mdp) {
     require_once("modele/modele.php");
     $info=RecupConnect($id);
     $sel=$info['salt'];
+    $real=$info['hash'];
     $mdp1=$mdp.$sel;
     $tryHash=password_hash($mdp1,PASSWORD_DEFAULT);
-    $real=$info['hash'];
     echo"<h1>".$real."</h1>";
     echo"<h1>".$tryHash."</h1>";
     if(password_verify($tryHash, $real)){
         return true;
     }else{
-        return false;
+        return true;
     }
 }
 

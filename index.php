@@ -27,9 +27,8 @@ session_start();
                         $id=htmlspecialchars($_POST['tryId']);
                         $mdpTest=htmlspecialchars($_POST['TryMdp']);
                         if(tryPassword($id,$mdpTest)){
-                            session_start();
                             $_SESSION['id'] = $id;
-                            $_SESSION['hash']=$hash;
+                            $_SESSION['hash']=$mdpTest;
                             homeDisplay();
                         }else{
                             connectDisplay();
