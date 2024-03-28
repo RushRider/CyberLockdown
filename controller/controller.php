@@ -8,7 +8,7 @@ function registerDisplay(){
 }
 
 function homeDisplay(){
-    require_once("views/accueil.php");
+    require_once("/views/accueil.php");
 }
 
 function footerDisplay(){
@@ -30,5 +30,16 @@ function tryPassword($id, $mdp) {
         return true;
     }else{
         return false;
+    }
+}
+
+function GenPass(){
+    $chaine = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#-_/:!+*$%;,";
+    $nb_caract = 14;
+    $pass = "";
+    for($u = 1; $u <= $nb_caract; $u++) {
+        $nb = strlen($chaine);
+        $nb = mt_rand(0,($nb-1));
+        $pass.=$chaine[$nb];
     }
 }
