@@ -12,10 +12,10 @@ body, html {
     top: 10%;
     padding: 10px;
     background-color: #262625;
-    border-radius: 15px;
+    border-radius: 15px;  
 }
 
-.cbld_titre {
+.cbld_titre {   
     position: fixed;
     top: 190px;
     width: 320px;
@@ -87,7 +87,9 @@ footer p {
 }
 
 .form_id input[type="text"],
-.form_id input[type="number"] {
+.form_id input[type="number"],
+.form_id input[type="password"],
+.form_id input[type="password2"] {
     border-radius: 7px;
     padding: 2px;
     background-color: #313432;
