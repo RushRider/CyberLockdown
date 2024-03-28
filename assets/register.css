@@ -88,8 +88,7 @@ footer p {
 
 .form_id input[type="text"],
 .form_id input[type="number"],
-.form_id input[type="password"],
-.form_id input[type="password2"] {
+.form_id input[type="password"]{
     border-radius: 7px;
     padding: 2px;
     background-color: #313432;
