@@ -24,8 +24,11 @@ function tryPassword($id, $mdp) {
     require_once("modele/modele.php");
     $info=RecupConnect($id);
     $sel=$info['salt'];
-    $tryHash=password_hash($mdp.$sel,PASSWORD_DEFAULT);
+    $mdp1=$mdp.$sel;
+    $tryHash=password_hash($mdp1,PASSWORD_DEFAULT);
     $real=$info['hash'];
+    echo"<h1>".$real."</h1>";
+    echo"<h1>".$tryHash."</h1>";
     if(password_verify($tryHash, $real)){
         return true;
     }else{

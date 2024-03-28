@@ -7,12 +7,13 @@ session_start();
         $pseudo = htmlspecialchars($_POST["pseudo"]);
         $nom = htmlspecialchars($_POST["nom"]);
         $prenom = htmlspecialchars($_POST["prenom"]);
-        $mdp1 = htmlspecialchars($_POST["mdp"]);
+        $mdp = htmlspecialchars($_POST["mdp"]);
         $num = htmlspecialchars($_POST["num"]);
         $pays = htmlspecialchars($_POST["pays"]);
         $sel=openssl_random_pseudo_bytes(16);
         $sel_hex=bin2hex($sel);
-        $hash=password_hash($mdp1.$sel_hex,PASSWORD_DEFAULT);
+        $mdp1=$mdp.$sel_hex;
+        $hash=password_hash($mdp1,PASSWORD_DEFAULT);
         newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$sel_hex);
         connectDisplay();
     }else{
