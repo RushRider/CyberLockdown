@@ -117,3 +117,18 @@ footer p {
 .logo img{
     width: 175px;
 }
+
+.pacompte_fen {
+    Font-family: monospace;
+    margin-left: 7%;
+}
+
+.pacompte_fen a {
+    text-decoration: none;
+    color: #F5CB5A;
+    margin-bottom: 30px;
+}
+
+.pacompte_fen a:hover {
+    text-decoration: underline; 
+}

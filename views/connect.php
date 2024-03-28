@@ -29,7 +29,7 @@
         <div class="submt_fen">
             <input type="submit" value="Se connecter">
         </div>
-        <div>
+        <div class="pacompte_fen">
             <a href="/index.php?p=register">Pas de compte ?</a>
         </div>
     </form>
