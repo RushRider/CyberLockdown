@@ -24,8 +24,8 @@ session_start();
                 if($p=="home"){
                     if(htmlspecialchars(isset($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp'])) && htmlspecialchars(!empty($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp']))){
                         $id=htmlspecialchars($_POST['tryId']);
-                        $tryMdp=htmlspecialchars($_POST['TryMdp']);
-                        if(tryPassword($id,$tryMdp)){
+                        $mdpTest=htmlspecialchars($_POST['TryMdp']);
+                        if(tryPassword($id,$mdpTest)){
                             session_start();
                             $_SESSION['id'] = $id;
                             $_SESSION['hash']=$hash;
