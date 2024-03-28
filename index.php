@@ -13,9 +13,6 @@ session_start();
         $sel=openssl_random_pseudo_bytes(16);
         $sel_hex=bin2hex($sel);
         $hash=password_hash($mdp1.$sel_hex,PASSWORD_DEFAULT);
-        echo"<h1>".$sel_hex."</h1>";
-        echo"<h1>".$hash."</h1>";
-        echo"<h1>".$mdp1."</h1>";
         newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$sel_hex);
         connectDisplay();
     }else{
@@ -35,7 +32,6 @@ session_start();
                             homeDisplay();
                         }else{
                             connectDisplay();
-                            echo"<h1>aaaaaaaaaaaaaaaaaaaaaaaaa</h1>";
                         }
                     }
                 }
