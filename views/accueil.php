@@ -9,7 +9,7 @@
 <header>
     <img src="/assets/logo.png">
     <div class="theader">Vos mots de passe</div>
-    <div class="profile">Pseudo</div>
+    <div class="profile"><?php echo($_SESSION['id']) ?></div>
     <img src="/assets/icon_avatar.png">
 </header>
 

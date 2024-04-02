@@ -26,13 +26,10 @@ function tryPassword($id, $mdp) {
     $sel=$info['salt'];
     $real=$info['hash'];
     $mdp1=$mdp.$sel;
-    $tryHash=password_hash($mdp1,PASSWORD_DEFAULT);
-    echo"<h1>".$real."</h1>";
-    echo"<h1>".$tryHash."</h1>";
-    if(password_verify($tryHash, $real)){
+    if(password_verify($mdp1, $real)){
         return true;
     }else{
-        return true;
+        return false;
     }
 }
 
