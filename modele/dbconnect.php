@@ -6,4 +6,4 @@ function DbConnexion(){
         }catch(exception $e){
             die('Erreur : '.$e->getMessage());
         }
-}
+}a
