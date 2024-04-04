@@ -1,4 +1,4 @@
-<?php 
+<?php aaa
 require_once("controller/controller.php"); 
 footerDisplay();
 session_start();
