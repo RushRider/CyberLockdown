@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberLockdown</title>
-    <link href="../assets/connect.css" rel="stylesheet">
+    <link href="assets/connect.css" rel="stylesheet">
 </head>
 <body>
     <div class="logo">
-        <img src="../assets/logo.png">
+        <img src="assets/logo.png">
     </div>
     <div class="cbld_titre">
         <p>CyberLockdown</p>
