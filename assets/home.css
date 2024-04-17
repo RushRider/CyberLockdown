@@ -103,9 +103,11 @@ button:hover {
 }
 
 .Générateur {
-    position: fixed; /* Assure que la div reste en position fixe par rapport à la fenêtre du navigateur */
+    font-family: monospace;
+    position: fixed;
     right: 1%;
     bottom: 5%;
+
 }
 
 
