@@ -86,7 +86,7 @@
         try {
             var successful = document.execCommand('copy');
             var msg = successful ? 'réussie' : 'échouée';
-            alert('Copie ' + msg + '. Utilisez Ctrl+C ou Cmd+C pour copier manuellement.');
+            alert('Copie ' + msg + '.');
         } catch (err) {
             alert('Erreur lors de la copie, veuillez utiliser Ctrl+C ou Cmd+C manuellement.');
         }
@@ -95,7 +95,6 @@
             alert("Mot de passe copié avec succès!");
         }, function(err) {
             alert('Erreur lors de la copie: ' + err);
-            // Fallback manuel pour les cas d'erreur
             passwordField.select();
             alert('Veuillez utiliser Ctrl+C ou Cmd+C pour copier manuellement.');
         });
