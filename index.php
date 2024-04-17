@@ -22,16 +22,20 @@ session_start();
             if($p=="register"){
                 registerDisplay();
             }else{
-                if($p=="home"){
-                    if(htmlspecialchars(isset($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp'])) && htmlspecialchars(!empty($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp']))){
-                        $id=htmlspecialchars($_POST['tryId']);
-                        $mdpTest=htmlspecialchars($_POST['TryMdp']);
-                        if(tryPassword($id,$mdpTest)){
-                            $_SESSION['id'] = $id;
-                            $_SESSION['hash']=$mdpTest;
-                            homeDisplay();
-                        }else{
-                            connectDisplay();
+                if($p=="passwordforget"){
+                    forgottenDisplay();
+                }else{
+                    if($p=="home"){
+                        if(htmlspecialchars(isset($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp'])) && htmlspecialchars(!empty($_POST['tryId'])) && htmlspecialchars(isset($_POST['TryMdp']))){
+                            $id=htmlspecialchars($_POST['tryId']);
+                            $mdpTest=htmlspecialchars($_POST['TryMdp']);
+                            if(tryPassword($id,$mdpTest)){
+                                $_SESSION['id'] = $id;
+                                $_SESSION['hash']=$mdpTest;
+                                homeDisplay();
+                            }else{
+                                connectDisplay();
+                            }
                         }
                     }
                 }
