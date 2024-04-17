@@ -79,13 +79,29 @@
             document.getElementById("passwordField").value = password;
         }
         function copyToClipboard() {
-            var passwordField = document.getElementById("passwordField");
-            navigator.clipboard.writeText(passwordField.value).then(function() {
-                alert("Mot de passe copié avec succès!");
-            }).catch(function(error) {
-                alert("Erreur lors de la copie: " + error);
-            });
+    var passwordField = document.getElementById("passwordField");
+    if (!navigator.clipboard) {
+        // Fallback pour les navigateurs sans support de Clipboard API
+        passwordField.select();
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'réussie' : 'échouée';
+            alert('Copie ' + msg + '. Utilisez Ctrl+C ou Cmd+C pour copier manuellement.');
+        } catch (err) {
+            alert('Erreur lors de la copie, veuillez utiliser Ctrl+C ou Cmd+C manuellement.');
         }
+    } else {
+        navigator.clipboard.writeText(passwordField.value).then(function() {
+            alert("Mot de passe copié avec succès!");
+        }, function(err) {
+            alert('Erreur lors de la copie: ' + err);
+            // Fallback manuel pour les cas d'erreur
+            passwordField.select();
+            alert('Veuillez utiliser Ctrl+C ou Cmd+C pour copier manuellement.');
+        });
+    }
+}
+
     </script>
     </div>
 
