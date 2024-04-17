@@ -33,7 +33,7 @@
     <div class= "Générateur">
 <h2>Générateur de mot de passe personnalisé</h2>
     <label for="length">Longueur du mot de passe:</label>
-    <input type="number" id="length" value="14" min="4" max="128"><br>
+    <input type="number" id="length" value="14" min="4" max="20" onkeydown="return false;"><br>
 
     <input type="checkbox" id="includeNumbers" checked>
     <label for="includeNumbers">Inclure des chiffres</label><br>
