@@ -43,9 +43,10 @@
 
     <input type="checkbox" id="includeUppercase" checked>
     <label for="includeUppercase">Inclure des majuscules</label><br>
-
+<br>
     <button onclick="GenPass()">Générer Mot de Passe</button>
-    <input type="text" id="passwordField" readonly><br>
+    <input type="text" id="passwordField" readonly>
+    <button onclick="copyToClipboard()">Copier</button><br>
 
     <script>
         function GenPass() {
@@ -76,6 +77,14 @@
                 password += charset[randomIndex];
             }
             document.getElementById("passwordField").value = password;
+        }
+        function copyToClipboard() {
+            var passwordField = document.getElementById("passwordField");
+            navigator.clipboard.writeText(passwordField.value).then(function() {
+                alert("Mot de passe copié avec succès!");
+            }).catch(function(error) {
+                alert("Erreur lors de la copie: " + error);
+            });
         }
     </script>
     </div>
