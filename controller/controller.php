@@ -23,11 +23,15 @@ function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
 function tryPassword($id, $mdp) {
     require_once("modele/modele.php");
     $info=RecupConnect($id);
-    $sel=$info['salt'];
-    $real=$info['hash'];
-    $mdp1=$mdp.$sel;
-    if(password_verify($mdp1, $real)){
-        return true;
+    if(!empty($info['hash'])){
+        $sel=$info['salt'];
+        $real=$info['hash'];
+        $mdp1=$mdp.$sel;
+        if(password_verify($mdp1, $real)){
+            return true;
+        }else{
+            return false;
+        }
     }else{
         return false;
     }
