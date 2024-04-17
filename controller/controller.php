@@ -19,6 +19,10 @@ function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
     require_once("modele/modele.php");
     accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt);
 }
+function forgottenDisplay()
+{
+    require_once("views/passwordforget.php");
+}
 
 function tryPassword($id, $mdp) {
     require_once("modele/modele.php");
