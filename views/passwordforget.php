@@ -8,10 +8,7 @@
 </head>
 <body>
 <header>
-    <img src="assets/logo.png">
-    <div class="theader">Réinitialisation de mot de passe</div>
-    <div class="profile"><?php echo htmlspecialchars($_SESSION['id']); ?></div>
-    <img src="assets/icon_avatar.png">
+
 </header>
 
 <div class="fenetre">
