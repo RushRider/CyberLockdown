@@ -84,30 +84,3 @@ input[type="text"] {
     border-radius: 10px;
     border: none;
 }
-
-button {
-    padding: 6px 75px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    font-size: 25px;
-    background-color: #F5CB5A;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #cdaa4b;
-}
-
-.Générateur {
-    font-family: monospace;
-    position: fixed;
-    right: 1%;
-    bottom: 5%;
-
-}
-
-
