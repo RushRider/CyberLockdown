@@ -28,24 +28,57 @@
             <p>Autre</p>
         </div>
     </div>
-    <script>
-        function GenPass() {
-            var chaine = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#-_/:!+*$%;,";
-            var nb_caract = 14;
-            var pass = "";
-            for(var u = 1; u <= nb_caract; u++) {
-                var nb = chaine.length;
-                var randomIndex = Math.floor(Math.random() * nb);
-                pass += chaine[randomIndex];
-            }
-            document.getElementById("passwordField").value = pass;
-        }
-    </script>
 </head>
 <body>
-    <div class="generate">
-        <input type="text" id="passwordField" readonly>
-        <button onclick="GenPass()">Générer</button>
+    <div class= "Générateur">
+<h2>Générateur de mot de passe personnalisé</h2>
+    <label for="length">Longueur du mot de passe:</label>
+    <input type="number" id="length" value="14" min="4" max="128"><br>
+
+    <input type="checkbox" id="includeNumbers" checked>
+    <label for="includeNumbers">Inclure des chiffres</label><br>
+
+    <input type="checkbox" id="includeSymbols" checked>
+    <label for="includeSymbols">Inclure des symboles</label><br>
+
+    <input type="checkbox" id="includeUppercase" checked>
+    <label for="includeUppercase">Inclure des majuscules</label><br>
+
+    <button onclick="GenPass()">Générer Mot de Passe</button>
+    <input type="text" id="passwordField" readonly><br>
+
+    <script>
+        function GenPass() {
+            var length = document.getElementById("length").value;
+            var includeNumbers = document.getElementById("includeNumbers").checked;
+            var includeSymbols = document.getElementById("includeSymbols").checked;
+            var includeUppercase = document.getElementById("includeUppercase").checked;
+
+            var baseCharset = "abcdefghijklmnopqrstuvwxyz";
+            var numberCharset = "0123456789";
+            var symbolCharset = "@#-_/:!+*$%;,";
+            var upperCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            var charset = baseCharset;
+            if (includeNumbers) {
+                charset += numberCharset;
+            }
+            if (includeSymbols) {
+                charset += symbolCharset;
+            }
+            if (includeUppercase) {
+                charset += upperCharset;
+            }
+
+            var password = "";
+            for (var i = 0; i < length; i++) {
+                var randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+            document.getElementById("passwordField").value = password;
+        }
+    </script>
     </div>
+
 </body>
 </html>

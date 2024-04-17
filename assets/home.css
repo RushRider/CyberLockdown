@@ -75,19 +75,6 @@ footer p {
     color: #F5CB5A;
 }
 
-.generate {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    background-color: #222222;
-    border-radius: 15px;
-}
-
-.generate * {
-    display: block;
-    font-family: monospace;
-}
-
 
 input[type="text"] {
     width: 250px;
@@ -114,3 +101,11 @@ button {
 button:hover {
     background-color: #cdaa4b;
 }
+
+.Générateur {
+    position: fixed; /* Assure que la div reste en position fixe par rapport à la fenêtre du navigateur */
+    right: 1%;
+    bottom: 5%;
+}
+
+
