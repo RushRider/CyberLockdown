@@ -49,3 +49,6 @@ session_start();
                 }
         }
     }
+?>
+<title>CyberLockdown</title>
+<html lang="fr">
