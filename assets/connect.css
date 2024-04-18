@@ -82,8 +82,6 @@ body, html {
 .mdp_oubli {
     padding-left: 20px;
 }
-
-
 .mdp_oubli p {
     color: #F5CB5A;
     Font-family: monospace;
@@ -132,3 +130,4 @@ footer p {
 .pacompte_fen a:hover {
     text-decoration: underline; 
 }
+

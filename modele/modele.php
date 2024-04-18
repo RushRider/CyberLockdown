@@ -18,9 +18,23 @@ function accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
 
 function RecupConnect($id){
     $db=DbConnexion();
-    $sql="select hash,salt from connect where pseudo=:id";
+    $sql="select * from connect where pseudo=:id";
     $statement=$db->prepare($sql);
     $statement->bindParam(':id', $id);
     $statement->execute();
     return $statement->fetch(); 
+}
+
+function addApp($account,$name,$id,$mdp,$type){
+    $db=DbConnexion();
+    $info=RecupConnect($account);
+    $idU=$info['id'];
+    $sql="insert into passwords (idUser,name,pseudo,mdp,type) values (:account,:name,:id,:mdp,:type)";
+    $statement=$db->prepare($sql);
+    $statement->bindParam(':account', $idU);
+    $statement->bindParam(':name', $name);
+    $statement->bindParam(':id', $id);
+    $statement->bindParam(':mdp', $mdp);
+    $statement->bindParam(':type', $type);
+    $statement->execute();
 }

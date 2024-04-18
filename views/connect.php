@@ -24,7 +24,7 @@
             <input type="password" name="TryMdp" id="mdp" required />
         </div>
         <div class="mdp_oubli">
-            <p>Mot de passe oublié ?</p>
+            <a href="index.php?p=passwordforget"> Mot de passe oublié ?</a>
         </div>
         <div class="submt_fen">
             <input type="submit" value="Se connecter">

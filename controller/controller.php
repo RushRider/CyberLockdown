@@ -19,6 +19,10 @@ function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
     require_once("modele/modele.php");
     accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt);
 }
+function forgottenDisplay()
+{
+    require_once("views/passwordforget.php");
+}
 
 function tryPassword($id, $mdp) {
     require_once("modele/modele.php");
@@ -46,4 +50,9 @@ function GenPass(){
         $nb = mt_rand(0,($nb-1));
         $pass.=$chaine[$nb];
     }
+}
+
+function appAdd($account,$name,$id,$mdp,$type){
+    require_once("modele/modele.php");
+    addApp($account,$name,$id,$mdp,$type);
 }
