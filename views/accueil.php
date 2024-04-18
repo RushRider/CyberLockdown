@@ -9,7 +9,7 @@
 <header>
     <img src="assets/logo.png">
     <div class="theader">Vos mots de passe</div>
-    <div class="profile"><?php echo($_SESSION['id']) ?></div>
+    <div class="profile"><?php echo($_SESSION['name']) ?></div>
     <img src="assets/icon_avatar.png">
 </header>
 
@@ -17,7 +17,7 @@
     <div class="fenetre">
         <div class="travail">
             <p>Travail et éducation</p>
-            <form action="index.php?$appType=travail" method="POST">
+            <form action="index.php?appType=travail" method="POST">
                 <h3>Ajouter un compte :</h3>
                 <label for="email">Application :</label>
                 <input type="text" id="app" name="app" required><br>
@@ -30,12 +30,42 @@
         </div>
         <div class="finance">
             <p>Finance et achat</p>
+            <form action="index.php?appType=finance" method="POST">
+                <h3>Ajouter un compte :</h3>
+                <label for="email">Application :</label>
+                <input type="text" id="app" name="app" required><br>
+                <label for="email">Mail/Identifiant :</label>
+                <input type="text" id="iden" name="iden" required><br>
+                <label for="email">Mot de passe :</label>
+                <input type="text" id="mdp" name="mdp" required><br>
+                <button type="submit">Créer</button>
+            </form>
         </div>
         <div class="comm">
             <p>Email et communication</p>
+            <form action="index.php?appType=com" method="POST">
+                <h3>Ajouter un compte :</h3>
+                <label for="email">Application :</label>
+                <input type="text" id="app" name="app" required><br>
+                <label for="email">Mail/Identifiant :</label>
+                <input type="text" id="iden" name="iden" required><br>
+                <label for="email">Mot de passe :</label>
+                <input type="text" id="mdp" name="mdp" required><br>
+                <button type="submit">Créer</button>
+            </form>
         </div>
         <div class="autre">
             <p>Autre</p>
+            <form action="index.php?appType=autre" method="POST">
+                <h3>Ajouter un compte :</h3>
+                <label for="email">Application :</label>
+                <input type="text" id="app" name="app" required><br>
+                <label for="email">Mail/Identifiant :</label>
+                <input type="text" id="iden" name="iden" required><br>
+                <label for="email">Mot de passe :</label>
+                <input type="text" id="mdp" name="mdp" required><br>
+                <button type="submit">Créer</button>
+            </form>
         </div>
     </div>
 </head>
