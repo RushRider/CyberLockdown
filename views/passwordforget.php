@@ -8,7 +8,8 @@
 </head>
 <body>
 <header>
-
+    <img src="assets/logo.png">
+    <div class="theader">Mot de passe oublié</div>
 </header>
 
 <div class="fenetre">
