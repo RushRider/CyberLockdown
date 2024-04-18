@@ -51,3 +51,7 @@ function GenPass(){
         $pass.=$chaine[$nb];
     }
 }
+
+function appAdd($account,$name,$id,$mdp,$type){
+    addApp($account,$name,$id,$mdp,$type);
+}
