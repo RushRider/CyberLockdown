@@ -17,6 +17,14 @@
     <div class="fenetre">
         <div class="travail">
             <p>Travail et éducation</p>
+            <form action="submit_password_reset.php" method="POST">
+                <h3>Ajouter un compte :</h3>
+                <label for="email">Mail/Identifiant :</label>
+                <input type="text" id="iden" name="iden" required><br>
+                <label for="email">Mot de passe :</label>
+                <input type="text" id="mdp" name="mdp" required><br>
+                <button type="submit">Créer</button>
+            </form>
         </div>
         <div class="finance">
             <p>Finance et achat</p>
