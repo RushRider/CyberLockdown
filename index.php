@@ -18,7 +18,7 @@ session_start();
         connectDisplay();
     }else{
         if(htmlspecialchars(isset($_POST["app"])) && htmlspecialchars(isset($_SESSION['hash']))){
-            appAdd($_SESSION['id'],$_POST["app"],$_POST["iden"],$_POST["mdp"],$_GET["appType"]);
+            appAdd($_SESSION['name'],$_POST["app"],$_POST["iden"],$_POST["mdp"],$_GET["appType"]);
             homeDisplay();
         }else{
             if(htmlspecialchars(isset($_GET["p"])) && htmlspecialchars(!empty($_GET["p"]))){
