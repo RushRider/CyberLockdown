@@ -72,15 +72,70 @@ footer p {
 }
 
 .fenetre div p:hover {
-    color: #F5CB5A;
+    color: #cdaa4b;
 }
 
+.Générateur {
+    font-family: monospace;
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    background-color: #222222;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.Générateur * {
+    margin-bottom: 3%;
+}
+
+h2 {
+    color: #F5CB5A;
+    font-size: 150%;
+    margin-top: 0%;
+}
+
+.long {
+    width:17%;
+    margin-top: 8%;
+    padding: 1%;
+    background-color: #313432;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.text_gener {
+    margin-left: 3%;
+    color: white;
+}
+
+.Générateur button {
+    border-radius: 9px;
+    padding: 2%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: #F5CB5A;;
+}
+
+.Générateur button:hover {
+    background-color: #cdaa4b;
+}
 
 input[type="text"] {
-    width: 250px;
-    padding: 10px;
-    margin: 20px;
-    font-size: 16px;
     border-radius: 10px;
-    border: none;
+    padding: 2%;
+    outline: none;
+    box-shadow: none;
+    width: 81%;
 }
+
+input[type="checkbox"] {
+    width: 1.25em;
+    height: 1.25rem;
+    accent-color: #cdaa4b;
+    cursor: pointer;
+  }

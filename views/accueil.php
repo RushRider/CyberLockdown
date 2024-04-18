@@ -70,23 +70,25 @@
     </div>
 </head>
 <body>
-    <div class= "Générateur">
-<h2>Générateur de mot de passe personnalisé</h2>
-    <label for="length">Longueur du mot de passe:</label>
-    <input type="number" id="length" value="14" min="4" max="20" onkeydown="return false;"><br>
+
+<div class= "Générateur">
+<h2>Générer un mot de passe</h2>
+<input class="long" type="number" id="length" value="14" min="4" max="20" onkeydown="return false;">
+    <label class="text_gener" for="length">Longueur du mot de passe</label>
+    <br>
 
     <input type="checkbox" id="includeNumbers" checked>
-    <label for="includeNumbers">Inclure des chiffres</label><br>
+    <label class="text_gener" for="includeNumbers">Inclure des chiffres</label><br>
 
     <input type="checkbox" id="includeSymbols" checked>
-    <label for="includeSymbols">Inclure des symboles</label><br>
+    <label class="text_gener" for="includeSymbols">Inclure des symboles</label><br>
 
     <input type="checkbox" id="includeUppercase" checked>
-    <label for="includeUppercase">Inclure des majuscules</label><br>
+    <label class="text_gener" for="includeUppercase">Inclure des majuscules</label><br>
 <br>
-    <button onclick="GenPass()">Générer Mot de Passe</button>
-    <input type="text" id="passwordField" readonly>
+    <button onclick="GenPass()">Générer mot de passe</button>
     <button onclick="copyToClipboard()">Copier</button><br>
+    <input type="text" id="passwordField" readonly>
 
     <script>
         function GenPass() {
@@ -121,7 +123,6 @@
         function copyToClipboard() {
     var passwordField = document.getElementById("passwordField");
     if (!navigator.clipboard) {
-        // Fallback pour les navigateurs sans support de Clipboard API
         passwordField.select();
         try {
             var successful = document.execCommand('copy');
