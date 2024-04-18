@@ -9,6 +9,7 @@
 <header>
     <img src="assets/logo.png">
     <div class="theader">Vos mots de passe</div>
+    <div class="deco"><a href="views/deco.php">Se déconnecter</a></div>
     <div class="profile"><?php echo($_SESSION['name']) ?></div>
     <img src="assets/icon_avatar.png">
 </header>
