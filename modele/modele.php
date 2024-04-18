@@ -38,3 +38,15 @@ function addApp($account,$name,$id,$mdp,$type){
     $statement->bindParam(':type', $type);
     $statement->execute();
 }
+
+function Content($name,$type){
+    $db=DbConnexion();
+    $info=RecupConnect($name);
+    $idU=$info['id'];
+    $sql="select * from passwords where idUser=:id and type=:type order by name asc";
+    $statement=$db->prepare($sql);
+    $statement->bindParam(':id', $idU);
+    $statement->bindParam(':type', $type);
+    $statement->execute();
+    return $statement->fetchAll(); 
+}

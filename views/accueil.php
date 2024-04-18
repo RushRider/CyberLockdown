@@ -16,8 +16,8 @@
 
 <body>
     <div class="fenetre">
+        <p>Travail et éducation</p>
         <div class="travail">
-            <p>Travail et éducation</p>
             <form action="index.php?appType=travail" method="POST">
                 <h3>Ajouter un compte :</h3>
                 <label for="email">Application :</label>
@@ -28,9 +28,32 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button type="submit">Créer</button>
             </form>
+            <div class="pwdTravail">
+                <?php 
+                    $type='travail';
+                    $info=recupContent($_SESSION['name'],$type);
+                    $range=count($info);
+                    for($i=0;$i<$range;$i++){
+                        echo "<div class='mdpTra'>";
+                        echo '<h4>';
+                        echo $info[$i]['name'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['pseudo'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['mdp'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '</div>';
+                    }
+                ?>
+            </div>
         </div>
+        <p>Finance et achat</p>
         <div class="finance">
-            <p>Finance et achat</p>
             <form action="index.php?appType=finance" method="POST">
                 <h3>Ajouter un compte :</h3>
                 <label for="email">Application :</label>
@@ -41,9 +64,32 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button type="submit">Créer</button>
             </form>
+            <div class="pwdFinance">
+                <?php 
+                    $type='finance';
+                    $info=recupContent($_SESSION['name'],$type);
+                    $range=count($info);
+                    for($i=0;$i<$range;$i++){
+                        echo "<div class='mdpTra'>";
+                        echo '<h4>';
+                        echo $info[$i]['name'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['pseudo'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['mdp'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '</div>';
+                    }
+                ?>
+            </div>
         </div>
+        <p>Finance et achat</p>
         <div class="comm">
-            <p>Email et communication</p>
             <form action="index.php?appType=com" method="POST">
                 <h3>Ajouter un compte :</h3>
                 <label for="email">Application :</label>
@@ -54,9 +100,32 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button type="submit">Créer</button>
             </form>
+            <div class="pwdCom">
+                <?php 
+                    $type='com';
+                    $info=recupContent($_SESSION['name'],$type);
+                    $range=count($info);
+                    for($i=0;$i<$range;$i++){
+                        echo "<div class='mdpTra'>";
+                        echo '<h4>';
+                        echo $info[$i]['name'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['pseudo'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['mdp'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '</div>';
+                    }
+                ?>
+            </div>
         </div>
+        <p>Autre</p>
         <div class="autre">
-            <p>Autre</p>
             <form action="index.php?appType=autre" method="POST">
                 <h3>Ajouter un compte :</h3>
                 <label for="email">Application :</label>
@@ -67,6 +136,29 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button type="submit">Créer</button>
             </form>
+            <div class="pwdAutre">
+                <?php 
+                    $type='autre';
+                    $info=recupContent($_SESSION['name'],$type);
+                    $range=count($info);
+                    for($i=0;$i<$range;$i++){
+                        echo "<div class='mdpTra'>";
+                        echo '<h4>';
+                        echo $info[$i]['name'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['pseudo'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '<h4>';
+                        echo $info[$i]['mdp'];
+                        echo '</h4>';
+                        echo '</br>';
+                        echo '</div>';
+                    }
+                ?>
+            </div>
         </div>
     </div>
 </head>

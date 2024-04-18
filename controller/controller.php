@@ -56,3 +56,8 @@ function appAdd($account,$name,$id,$mdp,$type){
     require_once("modele/modele.php");
     addApp($account,$name,$id,$mdp,$type);
 }
+
+function recupContent($name,$type){
+    require_once("modele/modele.php");
+    return Content($name,$type);
+}
