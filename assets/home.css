@@ -170,3 +170,29 @@ input[type="checkbox"] {
     right: 3%; 
     z-index: 999; 
 }
+
+.travail, .finance, .comm, .autre {
+    background-color: #222222;
+    border-radius: 15px;
+    padding: 2%;
+    color: white;
+    padding-left: 0%;
+    padding-right: 0%;
+    font-family: monospace;
+    font-size: 125%;
+}
+
+.travail *, .finance *, .comm *, .autre * {
+    margin-bottom: 3%;
+}
+
+.deco {
+    background-color:#F5CB5A;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+.deco a {
+    font-family: monospace;
+    font-weight: 200;
+}

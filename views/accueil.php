@@ -19,7 +19,7 @@
         <p>Travail et éducation</p>
         <div class="travail">
             <form action="index.php?appType=travail" method="POST">
-                <h3>Ajouter un compte :</h3>
+                <h3>Ajouter un compte :</h3> <br>
                 <label for="email">Application :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
@@ -55,7 +55,7 @@
         <p>Finance et achat</p>
         <div class="finance">
             <form action="index.php?appType=finance" method="POST">
-                <h3>Ajouter un compte :</h3>
+                <h3>Ajouter un compte :</h3> <br>
                 <label for="email">Application :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
@@ -91,7 +91,7 @@
         <p>Finance et achat</p>
         <div class="comm">
             <form action="index.php?appType=com" method="POST">
-                <h3>Ajouter un compte :</h3>
+                <h3>Ajouter un compte :</h3> <br>
                 <label for="email">Application :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
@@ -127,7 +127,7 @@
         <p>Autre</p>
         <div class="autre">
             <form action="index.php?appType=autre" method="POST">
-                <h3>Ajouter un compte :</h3>
+                <h3>Ajouter un compte :</h3> <br>
                 <label for="email">Application :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
