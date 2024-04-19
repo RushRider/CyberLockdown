@@ -163,3 +163,10 @@ input[type="checkbox"] {
   .autre{
     margin-bottom: 100px;
   }
+
+  .Générateur {
+    position: fixed;
+    bottom: 10%; 
+    right: 3%; 
+    z-index: 999; 
+}
