@@ -15,9 +15,9 @@ function footerDisplay(){
     require_once("views/footer.php");   
 }
 
-function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt){
+function newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt,$key){
     require_once("modele/modele.php");
-    accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt);
+    accountCreate($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$salt,$key);
 }
 function forgottenDisplay()
 {
@@ -52,12 +52,17 @@ function GenPass(){
     }
 }
 
-function appAdd($account,$name,$id,$mdp,$type){
+function appAdd($account,$name,$id,$mdp,$iv,$type){
     require_once("modele/modele.php");
-    addApp($account,$name,$id,$mdp,$type);
+    addApp($account,$name,$id,$mdp,$iv,$type);
 }
 
 function recupContent($name,$type){
     require_once("modele/modele.php");
     return Content($name,$type);
+}
+
+function recupInfo($id){
+    require_once("modele/modele.php");
+    return RecupConnect($id);
 }

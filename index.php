@@ -12,13 +12,21 @@ session_start();
         $pays = htmlspecialchars($_POST["pays"]);
         $sel=openssl_random_pseudo_bytes(16);
         $sel_hex=bin2hex($sel);
+        $key=openssl_random_pseudo_bytes(32);
+        $key_hex=bin2hex($key);
         $mdp1=$mdp.$sel_hex;
         $hash=password_hash($mdp1,PASSWORD_DEFAULT);
-        newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$sel_hex);
+        newAccount($pseudo,$hash,$nom,$prenom,$mail,$num,$pays,$sel_hex,$key_hex);
         connectDisplay();
     }else{
         if(htmlspecialchars(isset($_POST["app"])) && htmlspecialchars(isset($_SESSION['hash']))){
-            appAdd($_SESSION['name'],$_POST["app"],$_POST["iden"],$_POST["mdp"],$_GET["appType"]);
+            $info=recupInfo($_SESSION['name']);
+            $keyr=$info['cle'];
+            $key=hex2bin($keyr);
+            $iv=openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
+            $crypted=openssl_encrypt($_POST["mdp"], 'aes-256-cbc', $key,0,$iv);
+            $iv_hex=bin2hex($iv);
+            appAdd($_SESSION['name'],$_POST["app"],$_POST["iden"],$crypted,$iv_hex,$_GET["appType"]);
             homeDisplay();
         }else{
             if(htmlspecialchars(isset($_GET["p"])) && htmlspecialchars(!empty($_GET["p"]))){

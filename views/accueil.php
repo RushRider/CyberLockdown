@@ -15,6 +15,7 @@
 </header>
 
 <body>
+    <?php require_once("controller/controller.php"); ?>
     <div class="fenetre">
         <p>Travail et éducation</p>
         <div class="travail">
@@ -34,6 +35,11 @@
                     $info=recupContent($_SESSION['name'],$type);
                     $range=count($info);
                     for($i=0;$i<$range;$i++){
+                        $infoC=recupInfo($_SESSION['name']);
+                        $key=$infoC['cle'];
+                        $key_binary=hex2bin($key);
+                        $iv=hex2bin($info[$i]['iv']);
+                        $mdp=openssl_decrypt($info[$i]['mdp'],'aes-256-cbc',$key_binary,0,$iv);
                         echo "<div class='mdpTra'>";
                         echo '<h4>';
                         echo $info[$i]['name'];
@@ -44,7 +50,7 @@
                         echo '</h4>';
                         echo '</br>';
                         echo '<h4>';
-                        echo $info[$i]['mdp'];
+                        echo $mdp;
                         echo '</h4>';
                         echo '</br>';
                         echo '</div>';
@@ -70,6 +76,11 @@
                     $info=recupContent($_SESSION['name'],$type);
                     $range=count($info);
                     for($i=0;$i<$range;$i++){
+                        $infoC=recupInfo($_SESSION['name']);
+                        $key=$infoC['cle'];
+                        $key_binary=hex2bin($key);
+                        $iv=hex2bin($info[$i]['iv']);
+                        $mdp=openssl_decrypt($info[$i]['mdp'],'aes-256-cbc',$key_binary,0,$iv);
                         echo "<div class='mdpTra'>";
                         echo '<h4>';
                         echo $info[$i]['name'];
@@ -80,7 +91,7 @@
                         echo '</h4>';
                         echo '</br>';
                         echo '<h4>';
-                        echo $info[$i]['mdp'];
+                        echo $mdp;
                         echo '</h4>';
                         echo '</br>';
                         echo '</div>';
@@ -106,6 +117,11 @@
                     $info=recupContent($_SESSION['name'],$type);
                     $range=count($info);
                     for($i=0;$i<$range;$i++){
+                        $infoC=recupInfo($_SESSION['name']);
+                        $key=$infoC['cle'];
+                        $key_binary=hex2bin($key);
+                        $iv=hex2bin($info[$i]['iv']);
+                        $mdp=openssl_decrypt($info[$i]['mdp'],'aes-256-cbc',$key_binary,0,$iv);
                         echo "<div class='mdpTra'>";
                         echo '<h4>';
                         echo $info[$i]['name'];
@@ -116,7 +132,7 @@
                         echo '</h4>';
                         echo '</br>';
                         echo '<h4>';
-                        echo $info[$i]['mdp'];
+                        echo $mdp;
                         echo '</h4>';
                         echo '</br>';
                         echo '</div>';
@@ -142,6 +158,11 @@
                     $info=recupContent($_SESSION['name'],$type);
                     $range=count($info);
                     for($i=0;$i<$range;$i++){
+                        $infoC=recupInfo($_SESSION['name']);
+                        $key=$infoC['cle'];
+                        $key_binary=hex2bin($key);
+                        $iv=hex2bin($info[$i]['iv']);
+                        $mdp=openssl_decrypt($info[$i]['mdp'],'aes-256-cbc',$key_binary,0,$iv);
                         echo "<div class='mdpTra'>";
                         echo '<h4>';
                         echo $info[$i]['name'];
@@ -152,7 +173,7 @@
                         echo '</h4>';
                         echo '</br>';
                         echo '<h4>';
-                        echo $info[$i]['mdp'];
+                        echo $mdp;
                         echo '</h4>';
                         echo '</br>';
                         echo '</div>';
