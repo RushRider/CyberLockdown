@@ -9,10 +9,11 @@ body, html {
 
 .fenetre_princ {
     position: relative;
-    top: 10%;
-    padding: 10px;
+    top: 12%;
+    padding: 3px;
     background-color: #262625;
     border-radius: 15px;  
+    width:15vi;
 }
 
 .cbld_titre {   
@@ -34,37 +35,38 @@ body, html {
 }
 
 .form_id > :nth-child(-n+8){
-    margin-top: 10px;
+    margin-top: 15px;
     padding-left: 20px;
     Font-family: monospace;
     color: #FCFBFC;
     font-weight: 600;
-    font-size: 20px;
-}
-
-.submt_fen {
-    padding-left: 31%;
+    font-size: 15px;
 }
 
 .submt_fen input[type="submit"] {
     background-color: #F5CB5A;
-    color: #000000;
+    color: #2c2c2c;
     Font-family: monospace;
-    font-size: 25px;
+    font-size: 125%;
     font-weight: 600;
-    border-radius: 10px;
-    width: 200px;
-    height: 75px;
+    border-radius: 15px;
+    width: 65%;
+    height: 4%;
     cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding-right: 3%;
+}
+
+.submt_fen {
+    margin-left: 17%;
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 4%;
     background-color: #222222;
 }
 
@@ -90,9 +92,33 @@ footer p {
 .form_id input[type="number"],
 .form_id input[type="password"]{
     border-radius: 7px;
-    padding: 2px;
+    margin-top: 2%;
+    padding: 1%;
     background-color: #313432;
     border: none;
     color: white;
+    width: 92%;
+}
 
+.id_nom input[type="text"], .id_prenom input[type="text"]{
+    width: 80%;
+}
+
+.container {
+    display: flex;
+}
+
+.revenir * {
+    text-decoration: none;
+    color: #F5CB5A;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.revenir {
+    margin-left: 27%;
+}
+
+.revenir *:hover {
+    text-decoration: underline;
 }

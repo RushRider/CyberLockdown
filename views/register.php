@@ -15,40 +15,45 @@
     </div>
     <div class="fenetre_princ">
     <form action="index.php" method="post" class="form_id">
-        <div class="id_mail">
-            <label for="id">Adresse mail</label>
-            <input type="text" name="mail" id="mail" required />
+        <div class="container">
+            <div class="id_nom">
+                <label for="id">Nom</label> <br>
+                <input type="text" placeholder="Nom" name="nom" id="nom" required />
+            </div>
+            <div class="id_prenom">
+                <label for="id">Prénom</label> <br>
+                <input type="text" placeholder="Prénom" name="prenom" id="prenom" required />
+            </div>
         </div>
         <div class="id_user">
-            <label for="id">Nom d'utilisateur</label>
-            <input type="text" name="pseudo" id="pseudo" required />
+            <label for="id">Nom d'utilisateur</label> <br>
+            <input type="text" placeholder="Nom d'utilisateur" name="pseudo" id="pseudo" required />
         </div>
-        <div class="id_nom">
-            <label for="id">Nom</label>
-            <input type="text" name="nom" id="nom" required />
-        </div>
-        <div class="id_prenom">
-            <label for="id">Prénom</label>
-            <input type="text" name="prenom" id="prenom" required />
+        <div class="id_mail">
+            <label for="id">Adresse mail</label> <br>
+            <input type="text" placeholder="Adresse mail" name="mail" id="mail" required />
         </div>
         <div class="mdp_fen">
-            <label for="id">Mot de passe</label>
-            <input type="password" name="mdp" id="mdp" required />
+            <label for="id">Mot de passe</label> <br>
+            <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" required />
         </div>
         <div class="mdp_fen">
-            <label for="id">Confirmation de Mot de passe</label>
-            <input type="password" name="mdp2" id="mdp2" required />
+            <label for="id">Confirmation de Mot de passe</label> <br>
+            <input type="password" placeholder="Confirmation de Mot de passe" name="mdp2" id="mdp2" required />
         </div>
         <div class="id_num">
-            <label for="id">Numéro de téléphone</label>
-            <input type="text" name="num" id="num" required />
+            <label for="id">Numéro de téléphone</label> <br>
+            <input type="text" placeholder="Numéro de téléphone" name="num" id="num" required />
         </div>
         <div class="id_country">
-            <label for="id">Pays</label>
-            <input type="text" name="pays" id="pays" required />
+            <label for="id">Pays</label> <br>
+            <input type="text" placeholder="Pays" name="pays" id="pays" required />
         </div>
         <div class="submt_fen">
-            <input type="submit" value="Creer compte">
+            <input type="submit" value="Créer compte">
+        </div>
+        <div class="revenir">
+            <a href="connect.php">J'ai un compte enfaîte</a>
         </div>
     </form>
     </div>

@@ -26,11 +26,14 @@
         <div class="mdp_oubli">
             <a href="index.php?p=passwordforget"> Mot de passe oublié ?</a>
         </div>
-        <div class="submt_fen">
-            <input type="submit" value="Se connecter">
-        </div>
-        <div class="pacompte_fen">
-            <a href="index.php?p=register">Pas de compte ?</a>
+
+        <div class="container">
+            <div class="submt_fen">
+                <input type="submit" value="Se connecter">
+            </div>
+            <div class="pacompte_fen">
+                <a href="index.php?p=register">Pas de compte ?</a>
+            </div>
         </div>
     </form>
     </div>
