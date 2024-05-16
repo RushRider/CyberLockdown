@@ -64,7 +64,7 @@
                         echo '</div>';
                     }
                 ?>
-            </div>
+        </div>
 
         <p>Finance et achat</p>
         <div class="finance">
@@ -78,6 +78,7 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button class="boutons" type="submit">Créer</button>
             </form>
+        </div>
             <div class="pwdFinance">
                 <?php 
                     $type='finance';
@@ -111,8 +112,6 @@
             </div>
         </div>
 
-
-
         <p>Loisirs</p>
         <div class="comm">
             <form action="index.php?appType=com" method="POST">
@@ -125,6 +124,7 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button class="boutons" type="submit">Créer</button>
             </form>
+        </div>
             <div class="pwdCom">
                 <?php 
                     $type='com';
@@ -157,6 +157,8 @@
                 ?>
             </div>
         </div>
+
+        
         <p>Autre</p>
         <div class="autre">
             <form action="index.php?appType=autre" method="POST">
@@ -169,6 +171,7 @@
                 <input type="text" id="mdp" name="mdp" required><br>
                 <button class="boutons" type="submit">Créer</button>
             </form>
+        </div>
             <div class="pwdAutre">
                 <?php 
                     $type='autre';

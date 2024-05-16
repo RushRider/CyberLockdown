@@ -57,20 +57,23 @@ footer p {
 }
 
 .fenetre {
-    padding-left: 50px;
-    margin-top: 120px;
+    padding-left: 3%;
+    margin-top: 10%;
 }
 
 .fenetre p {
     background-color: #222222;
     width: fit-content;
-    margin-top: 30px;
+    margin-top: 10%;
     font-size: 30px;
     font-family: monospace;
     color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 2%;
     cursor: pointer;
+}
+
+.fenetre * {
 }
 
 .fenetre p:hover {
