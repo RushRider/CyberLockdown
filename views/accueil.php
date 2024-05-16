@@ -79,7 +79,8 @@
                 <button class="boutons" type="submit">Créer</button>
             </form>
         </div>
-            <div class="pwdFinance">
+
+        <div class="pwdFinance">
                 <?php 
                     $type='finance';
                     $info=recupContent($_SESSION['name'],$type);
@@ -109,7 +110,6 @@
                         echo '</div>';
                     }
                 ?>
-            </div>
         </div>
 
         <p>Loisirs</p>
@@ -125,7 +125,8 @@
                 <button class="boutons" type="submit">Créer</button>
             </form>
         </div>
-            <div class="pwdCom">
+
+        <div class="pwdCom">
                 <?php 
                     $type='com';
                     $info=recupContent($_SESSION['name'],$type);
@@ -155,9 +156,7 @@
                         echo '</div>';
                     }
                 ?>
-            </div>
-        </div>
-
+         </div>
         
         <p>Autre</p>
         <div class="autre">
@@ -172,7 +171,8 @@
                 <button class="boutons" type="submit">Créer</button>
             </form>
         </div>
-            <div class="pwdAutre">
+            
+        <div class="pwdAutre">
                 <?php 
                     $type='autre';
                     $info=recupContent($_SESSION['name'],$type);
@@ -202,7 +202,6 @@
                         echo '</div>';
                     }
                 ?>
-            </div>
         </div>
     </div>
 </head>
