@@ -73,10 +73,6 @@ footer p {
     cursor: pointer;
 }
 
-.fenetre * {
-    
-}
-
 .fenetre p:hover {
     color: #cdaa4b;
 }
