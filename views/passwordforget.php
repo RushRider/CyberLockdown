@@ -13,7 +13,7 @@
 </header>
 
 <div class="fenetre">
-    <form action="submit_password_reset.php" method="POST">
+    <form action="index.php" method="POST">
         <h2>Demande de réinitialisation de mot de passe</h2>
         <label for="email">Adresse email:</label>
         <input type="email" id="email" name="email" required><br>
