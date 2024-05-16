@@ -17,7 +17,7 @@
     <form action="index.php?p=home" method="post" class="form_id">
         <div class="id_fen">
             <label for="id">Identifiant</label>
-            <input type="text" name="tryId" id="name" required />
+            <input type="text" name="tryId" id="name" maxlength="15" required />
         </div>
         <div class="mdp_fen">
             <label for="id">Mot de passe</label>

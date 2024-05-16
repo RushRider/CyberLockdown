@@ -53,9 +53,8 @@
             <input type="submit" value="Créer compte">
         </div>
         <div class="revenir">
-            <a href="connect.php">J'ai un compte enfaîte</a>
+            <a href="index.php">J'ai un compte enfaîte</a>
         </div>
     </form>
     </div>
 </body>
-

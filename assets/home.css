@@ -10,15 +10,15 @@ body, html {
 header {
     background-color: #222222;
     width: 100%;
-    height: 80px;
-    position: fixed;
+    height: 11%;
+    position: absolute;
     top: 0%;
     left: 0%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-family: monospace;
     color: #F5CB5A;
+    justify-content: space-between;
 }
 
 header img:first-child {
@@ -27,16 +27,18 @@ header img:first-child {
 
 header img:last-child {
     width: 70px;
-    padding-right: 17px;
+    padding-right: 2%;
 }
 
 .theader {
-    margin-right: 700px;
+    margin-left: 0%;
+    margin-right: 65%;
     font-size: 30px;
 }
 
 .profile {
     font-size: 25px;
+    margin-left: 0%;
 }
 
 footer {
@@ -95,6 +97,10 @@ h2 {
     margin-top: 0%;
 }
 
+h3 {
+    color: #F5CB5A;
+}
+
 .long {
     width:17%;
     margin-top: 8%;
@@ -136,7 +142,7 @@ input[type="text"] {
 input[type="checkbox"] {
     width: 1.25em;
     height: 1.25rem;
-    accent-color: #cdaa4b;
+    accent-color: #F5CB5A;
     cursor: pointer;
   }
 
@@ -188,11 +194,46 @@ input[type="checkbox"] {
 
 .deco {
     background-color:#F5CB5A;
-    padding: 1%;
-    border-radius: 15px;
+    padding: 2%;
+    border-radius: 10px;
 }
 
 .deco a {
     font-family: monospace;
-    font-weight: 200;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.deco:hover {
+    background-color: #cdaa4b;
+}
+
+header img:last-child {
+    width: 70px;
+    padding-right: 2%;
+}
+
+.theader2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 2%;
+}
+
+.theader2 > * {
+    margin-left: 5%; 
+}
+
+.boutons {
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #F5CB5A;
+    padding: 2%;
+    font-weight: 550;
+}
+
+.boutons:hover {
+    background-color: #cdaa4b;
 }

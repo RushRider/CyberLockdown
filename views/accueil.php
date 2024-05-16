@@ -9,9 +9,11 @@
 <header>
     <img src="assets/logo.png">
     <div class="theader">Vos mots de passe</div>
-    <div class="deco"><a href="views/deco.php">Se déconnecter</a></div>
-    <div class="profile"><?php echo($_SESSION['name']) ?></div>
-    <img src="assets/icon_avatar.png">
+    <div class="theader2">
+        <div class="deco"><a href="views/deco.php">Déconnexion</a></div>
+        <div class="profile"><?php echo($_SESSION['name']) ?></div>
+        <img src="assets/icon_avatar.png">
+    </div>
 </header>
 
 <body>
@@ -21,15 +23,18 @@
         <div class="travail">
             <form action="index.php?appType=travail" method="POST">
                 <h3>Ajouter un compte :</h3> <br>
-                <label for="email">Application :</label>
+                <label for="email">Site :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
                 <input type="text" id="iden" name="iden" required><br>
                 <label for="email">Mot de passe :</label>
                 <input type="text" id="mdp" name="mdp" required><br>
-                <button type="submit">Créer</button>
+                <button class="boutons" type="submit">Créer</button>
             </form>
-            <div class="pwdTravail">
+        </div>
+
+
+        <div class="pwdTravail">
                 <?php 
                     $type='travail';
                     $info=recupContent($_SESSION['name'],$type);
@@ -57,18 +62,18 @@
                     }
                 ?>
             </div>
-        </div>
+
         <p>Finance et achat</p>
         <div class="finance">
             <form action="index.php?appType=finance" method="POST">
                 <h3>Ajouter un compte :</h3> <br>
-                <label for="email">Application :</label>
+                <label for="email">Site :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
                 <input type="text" id="iden" name="iden" required><br>
                 <label for="email">Mot de passe :</label>
                 <input type="text" id="mdp" name="mdp" required><br>
-                <button type="submit">Créer</button>
+                <button class="boutons" type="submit">Créer</button>
             </form>
             <div class="pwdFinance">
                 <?php 
@@ -99,17 +104,20 @@
                 ?>
             </div>
         </div>
-        <p>Finance et achat</p>
+
+
+
+        <p>Loisirs</p>
         <div class="comm">
             <form action="index.php?appType=com" method="POST">
                 <h3>Ajouter un compte :</h3> <br>
-                <label for="email">Application :</label>
+                <label for="email">Site :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
                 <input type="text" id="iden" name="iden" required><br>
                 <label for="email">Mot de passe :</label>
                 <input type="text" id="mdp" name="mdp" required><br>
-                <button type="submit">Créer</button>
+                <button class="boutons" type="submit">Créer</button>
             </form>
             <div class="pwdCom">
                 <?php 
@@ -144,13 +152,13 @@
         <div class="autre">
             <form action="index.php?appType=autre" method="POST">
                 <h3>Ajouter un compte :</h3> <br>
-                <label for="email">Application :</label>
+                <label for="email">Site :</label>
                 <input type="text" id="app" name="app" required><br>
                 <label for="email">Mail/Identifiant :</label>
                 <input type="text" id="iden" name="iden" required><br>
                 <label for="email">Mot de passe :</label>
                 <input type="text" id="mdp" name="mdp" required><br>
-                <button type="submit">Créer</button>
+                <button class="boutons" type="submit">Créer</button>
             </form>
             <div class="pwdAutre">
                 <?php 
