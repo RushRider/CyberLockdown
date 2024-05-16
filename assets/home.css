@@ -277,3 +277,7 @@ header img:last-child {
 h4 {
     margin-top: 2%;
 }
+
+.pwdAutre, .pwdCom, .pwdFinance, .pwdTravail {
+    margin-top: 5%;
+}
