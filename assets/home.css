@@ -237,3 +237,43 @@ header img:last-child {
 .boutons:hover {
     background-color: #cdaa4b;
 }
+
+.fenetre > div:not(p) {
+    display:inline-flex;
+    justify-content: left;
+}
+
+.mdpTra {
+    background-color: #222222;
+    color: #F5CB5A;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 6%;
+    padding: 8%;
+}
+
+.nommdp {
+    background-color: #F5CB5A;
+    color: #222222;
+    border-radius: 5px;
+    padding: 5%;
+}
+
+.fenetre {
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.mdp {
+    color: #313432;
+    background-color:#313432;
+    border-radius: 6px;
+}
+
+.mdp:hover {
+    color: #F5CB5A;
+}
+
+h4 {
+    margin-top: 2%;
+}
