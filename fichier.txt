@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 "Contenu de conflit1" 
+=======
+"Contenu de conflit2" 
+>>>>>>> conflit2
